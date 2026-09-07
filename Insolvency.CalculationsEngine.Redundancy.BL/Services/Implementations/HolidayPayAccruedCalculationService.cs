@@ -241,7 +241,7 @@ namespace Insolvency.CalculationsEngine.Redundancy.BL.Services.Implementations
 
             decimal proRataAccruedDays = 0.00m;
 
-            var irregularHoursEntitlement = ConfigValueLookupHelper.Get_Irregular_Hour_Worker_ContractedHolEntitlement(options);
+            var irregularHoursEntitlement = statHolEntitlement;
             if (data.HolidayAccruedDaysCore.HasValue && data.HolidayAccruedDaysCore > irregularHoursEntitlement)
             {
                 data.HolidayAccruedDaysCore = irregularHoursEntitlement;
